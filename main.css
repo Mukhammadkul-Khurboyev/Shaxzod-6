@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 25px;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #e60023;
+    white-space: nowrap;
+}
+
+#search {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 25px;
+    background: #efefef;
+    font-size: 15px;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+#homeBtn {
+    padding: 12px 18px;
+    border-radius: 22px;
+    background: #222;
+    color: white;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.category {
+    padding: 10px 18px;
+    border-radius: 20px;
+    background: white;
+}
+
+.category.active,
+.category:hover {
+    background: #222;
+    color: white;
+}
+
+.gallery {
+    columns: 5;
+    column-gap: 16px;
+    padding: 10px 20px 30px;
+}
+
+.pin {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 18px;
+    break-inside: avoid;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.pin img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.pin-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px;
+}
+
+.pin-info h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.save {
+    background: #e60023;
+    color: white;
+    padding: 9px 12px;
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.save.saved {
+    background: #222;
+}
+
+@media (max-width: 1100px) {
+    .gallery {
+        columns: 4;
+    }
+}
+
+@media (max-width: 800px) {
+    .gallery {
+        columns: 3;
+        padding: 10px;
+        column-gap: 10px;
+    }
+
+    .header {
+        gap: 10px;
+        padding: 14px 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    #homeBtn {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    #search {
+        width: 100%;
+        flex: 1;
+    }
+
+    .categories {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 12px 10px;
+    }
+
+    .category {
+        flex-shrink: 0;
+    }
+
+    .gallery {
+        columns: 2;
+        padding: 8px;
+        column-gap: 8px;
+    }
+
+    .pin {
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .pin-info {
+        padding: 8px;
+    }
+
+    .pin-info h3 {
+        font-size: 12px;
+    }
+
+    .save {
+        padding: 7px;
+        font-size: 11px;
+    }
+}
